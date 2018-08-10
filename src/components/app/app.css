@@ -1,0 +1,12 @@
+.app {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #F5F5F5;
+    background-image: url('/images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+}
