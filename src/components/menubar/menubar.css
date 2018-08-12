@@ -9,8 +9,39 @@
 
 .menubar__ios {
     display: grid;
+    grid-template-columns: min-content auto min-content auto min-content;
+    padding: 4px;
+    color: #FFF;
+    font-size: 12px;
+    transition: color .3s ease-in-out;
+}
+
+.menubar--dark .menubar__ios {
+    color: #000;
 }
 
 .menubar__macos {
     display: none;
+}
+
+.menubar__ios__icon-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+}
+
+.menubar__ios__icon-holder:last-child {
+    justify-content: flex-end;
+}
+
+.menubar__ios__icon-holder svg {
+    height: 16px;
+    fill: #FFF;
+    padding: 0px 2px 0px 2px;
+    transition: fill .3s ease-in-out;
+}
+
+.menubar--dark .menubar__ios svg {
+    fill: #000;
 }
