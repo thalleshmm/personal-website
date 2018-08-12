@@ -23,7 +23,7 @@ class Clock extends Component {
         let amPm = 'AM';
         let hours = this.state.date.getHours();
 
-        if (hours >= 12) {
+        if (hours > 12) {
             amPm = 'PM';
             hours -= 12;
         }
