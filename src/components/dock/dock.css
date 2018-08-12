@@ -1,0 +1,18 @@
+.dock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.dock__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
