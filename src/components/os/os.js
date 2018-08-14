@@ -9,7 +9,9 @@ class App extends Component {
         return <BrowserRouter>
             <div className="os">
                 <Menubar />
-                <div className="os__desktop"></div>
+                <div className="os__desktop">
+                    DESKTOP
+                </div>
                 <div className="os__dock">
                     <Dock />
                 </div>

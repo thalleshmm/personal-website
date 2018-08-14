@@ -12,36 +12,38 @@ const ICON_ABOUT_ME = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 5
 
 class Dock extends Component {
     render() {
-        return <div className="dock">
-            <div className="dock__placeholder">
-                <AppIcon to="/email"
-                      label="E-mail"
-                      icon={MAIL_ICON}
-                      backgroundColor="#1e61ee"
-                      backgroundColorTo="#1cd3ff" />
-            </div>
-            <div className="dock__placeholder">
-                <AppIcon to="/phone"
-                      label="Phone"
-                      icon={PHONE_ICON}
-                      backgroundColor="#66ff80"
-                      backgroundColorTo="#02b21f" />
-            </div>
-            <div className="dock__placeholder">
-                <AppIcon to="/projects"
-                      label="Projects"
-                      icon={APPSTORE_ICON}
-                      backgroundColor="#1cd3ff"
-                      backgroundColorTo="#1e61ee" />
-            </div>
-            <div className="dock__placeholder">
-                <AppIcon to="/about-me"
-                      label="About Me"
-                      icon={ICON_ABOUT_ME}
-                      backgroundColor="#fea700"
-                      backgroundColorTo="#fa661e" />
-            </div>
-        </div>
+        return <nav className="dock" title="Dock">
+            <ul className="dock__list">
+                <li className="dock__list-item">
+                    <AppIcon to="/email"
+                        label="E-mail"
+                        icon={MAIL_ICON}
+                        backgroundColor="#1e61ee"
+                        backgroundColorTo="#1cd3ff" />
+                </li>
+                <li className="dock__list-item">
+                    <AppIcon to="/phone"
+                        label="Phone"
+                        icon={PHONE_ICON}
+                        backgroundColor="#66ff80"
+                        backgroundColorTo="#02b21f" />
+                </li>
+                <li className="dock__list-item">
+                    <AppIcon to="/projects"
+                        label="Projects"
+                        icon={APPSTORE_ICON}
+                        backgroundColor="#1cd3ff"
+                        backgroundColorTo="#1e61ee" />
+                </li>
+                <li className="dock__list-item">
+                    <AppIcon to="/about-me"
+                        label="About Me"
+                        icon={ICON_ABOUT_ME}
+                        backgroundColor="#fea700"
+                        backgroundColorTo="#fa661e" />
+                </li>
+            </ul>
+        </nav>
     }
 }
 
