@@ -3,6 +3,17 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './appicon.css';
 
+const Wrapper = props => {
+    if (/^http/.test(props.to)) {
+        return <a href={props.to}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  {...props} />
+    } else {
+        return <Link {...props} />
+    }
+}
+
 class AppIcon extends Component {
     state = {
         backgroundColor: '#FFFfFF',
@@ -20,7 +31,7 @@ class AppIcon extends Component {
     }
 
     render() {
-        return <Link to={this.props.to}
+        return <Wrapper to={this.props.to}
                      className="appicon"
                      aria-label={this.props.label}>
             <div className="appicon__icon"
@@ -36,7 +47,7 @@ class AppIcon extends Component {
                 <div class="appicon__label">
                     {this.props.label}
                 </div> : false}
-        </Link>
+        </Wrapper>
     }
 }
 

@@ -28,5 +28,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    padding-top: 4px;
 }

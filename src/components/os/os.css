@@ -15,6 +15,7 @@
 
 .os__desktop {
     padding-top: 28px;
+    position: relative;
 }
 
 .os__dock {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import Menubar from '../menubar/menubar';
 import Dock from '../dock/dock';
+import Desktop from '../desktop/desktop';
 import './os.css';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
             <div className="os">
                 <Menubar />
                 <div className="os__desktop">
-                    DESKTOP
+                    <Desktop />
                 </div>
                 <div className="os__dock">
                     <Dock />
