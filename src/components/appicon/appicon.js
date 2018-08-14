@@ -8,7 +8,7 @@ const Wrapper = props => {
         return <a href={props.to}
                   target="_blank"
                   rel="noreferrer noopener"
-                  {...props} />
+                  {...props}>{props.children}</a>
     } else {
         return <Link {...props} />
     }
