@@ -1,5 +1,6 @@
 .app {
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content auto;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -13,12 +14,45 @@
 }
 
 .app__header {
+    display: block;
     padding-top: 32px;
-    display: grid;
     width: 100%;
-    grid-template-columns: 100px auto 100px;
     background-color: #F5F5F5;
     border-bottom: solid thin #CCC;
+    box-sizing: border-box;
+}
+
+.app__header__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.app__header__actions__action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #007aff;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 16px;
+}
+
+.app__header__actions > .app__header__actions__action:last-child {
+    justify-content: flex-end;
+}
+
+.app__header__title {
+    margin: 0px;
+    padding: 8px 16px 8px 16px;
+}
+
+.app__content {
+    position: relative;
 }
 
 @keyframes fadeInApp {

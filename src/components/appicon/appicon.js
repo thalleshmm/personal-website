@@ -44,7 +44,7 @@ class AppIcon extends Component {
                 {this.props.icon}
             </div>
             {this.state.visibleLabel ?
-                <div class="appicon__label">
+                <div className="appicon__label">
                     {this.props.label}
                 </div> : false}
         </Wrapper>
