@@ -8,9 +8,14 @@
     height: 100%;
     background-color: #FFF;
     will-change: transform;
-    animation-name: fadeInApp;
-    animation-duration: .3s;
-    animation-fill-mode: both;
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: transform .3s ease-in-out;
+}
+
+.app--active {
+    pointer-events: auto;
+    transform: translateY(0%);
 }
 
 .app__header {
@@ -40,6 +45,12 @@
     background-color: transparent;
     border: transparent;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.app__header__actions__action:disabled {
+    opacity: .5;
+    cursor: not-allowed;
 }
 
 .app__header__actions > .app__header__actions__action:last-child {
@@ -53,16 +64,4 @@
 
 .app__content {
     position: relative;
-}
-
-@keyframes fadeInApp {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
 }
