@@ -15,10 +15,6 @@ class App extends Component {
         this.onTouchStart = this.onTouchStart.bind(this);
     }
 
-    state = {
-        keyboardGuided: false
-    }
-
     componentDidMount() {
         window.addEventListener('keydown', this.onKeyDown);
         window.addEventListener('mousemove', this.onMouseMove);
@@ -32,25 +28,24 @@ class App extends Component {
     }
 
     onKeyDown(evt) {
-        if (evt.key !== "Tab" || this.state.keyboardGuided === true)
+        if (evt.key !== "Tab")
             return;
 
-        this.setState({ keyboardGuided: true });
+        this.$os.classList.add('os--keyboard-guided');
     }
 
     onMouseMove() {
-        if ( ! this.state.keyboardGuided) return;
-        this.setState({ keyboardGuided: false });
+        this.$os.classList.remove('os--keyboard-guided');
     }
 
     onTouchStart() {
-        if ( ! this.state.keyboardGuided) return;
-        this.setState({ keyboardGuided: false });
+        this.$os.classList.remove('os--keyboard-guided');
     }
 
     render() {
         return <BrowserRouter>
-            <div className={`os ${this.state.keyboardGuided ? 'os--keyboard-guided' : ''}`}>
+            <div className='os'
+                 ref={$el => this.$os = $el}>
                 <Menubar />
                 <div className="os__desktop">
                     <Desktop />
