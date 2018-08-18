@@ -4,6 +4,7 @@ import Menubar from '../menubar/menubar';
 import Dock from '../dock/dock';
 import Desktop from '../desktop/desktop';
 import AppMail from '../app-mail/app-mail';
+import Dialog from '../dialog/dialog';
 import './os.css';
 
 class App extends Component {
@@ -55,6 +56,7 @@ class App extends Component {
                 </div>
                 <Route path="/email"
                        component={AppMail} />
+                <Dialog />
             </div>
         </BrowserRouter>
     }

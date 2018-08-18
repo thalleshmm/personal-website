@@ -39,12 +39,21 @@ class AppMail extends Component {
         if (honeypot.length !== 0) return;
         
         if (subject.length === 0) {
-            alert('Subject is empty!');
+            const evt = new CustomEvent('dialog-open', {
+                text: 'Field `Subject` is empty'
+            });
+
+            window.dispatchEvent(evt);
             return;
         }
 
         if (message.length === 0) {
-            alert('Message is empty!');
+            const detail = {
+                text: 'Field `Message` is empty'
+            };
+
+            const evt = new CustomEvent('dialog-open', { detail });
+            window.dispatchEvent(evt);
             return;
         }
 
@@ -58,13 +67,24 @@ class AppMail extends Component {
                 body
             });
 
-            alert('Thank you. I\'ll respond ASAP =)');
+            const detail = {
+                text: 'Your message has been sent successfully. Thank you. I\'ll reply ASAP.'
+            };
+
+            const evt = new CustomEvent('dialog-open', { detail });
+            window.dispatchEvent(evt);
 
             this.$subject.value = 'Website Contact';
             this.$message.value = '';
 
         } catch (e) {
-            alert('I\'m sorry. E-mail could not be sent. Try again later');
+            const detail = {
+                text: 'I\'m sorry. E-mail could not be sent. Try again later'
+            };
+
+            const evt = new CustomEvent('dialog-open', { detail });
+            window.dispatchEvent(evt);
+
             return;
         }
     }
