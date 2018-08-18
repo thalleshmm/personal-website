@@ -14,6 +14,9 @@ class App extends Component {
         // otherwise the css animation won't run
         setTimeout(() => {
             this.$wrapper.classList.add('app--active');
+            setTimeout(() => {
+                this.$wrapper.focus();
+            }, 334);
         }, 32);
     }
 
@@ -41,7 +44,7 @@ class App extends Component {
                 <div {...props} ref={$el => this.$wrapper = $el}>{props.children}</div>;
         }
 
-        return <Wrapper className='app'>
+        return <Wrapper className='app' tabIndex="0">
             <header className="app__header">
                 <div className="app__header__actions">
                     <button type="button"
@@ -64,6 +67,9 @@ class App extends Component {
             <main className="app__content">
                 {this.props.children}
             </main>
+            <div className="app__tabtrab"
+                 tabIndex="0"
+                 onFocus={() => this.$wrapper.focus()} />
         </Wrapper>
     }
 }

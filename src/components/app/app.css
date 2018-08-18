@@ -65,3 +65,14 @@
 .app__content {
     position: relative;
 }
+
+.app__tabtrab {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
