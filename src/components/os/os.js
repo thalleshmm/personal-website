@@ -5,6 +5,7 @@ import Dock from '../dock/dock';
 import Desktop from '../desktop/desktop';
 import AppMail from '../app-mail/app-mail';
 import AppPhone from '../app-phone/app-phone';
+import AppProjects from '../app-projects/app-projects';
 import Dialog from '../dialog/dialog';
 import './os.css';
 
@@ -59,6 +60,8 @@ class App extends Component {
                        component={AppMail} />
                 <Route path="/phone"
                        component={AppPhone} />
+                <Route path="/projects"
+                       component={AppProjects} />
                 <Dialog />
             </div>
         </BrowserRouter>

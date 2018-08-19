@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Steps to go
 
-[ ] Projects app
+[x] Projects app
 [ ] About Me app
 [ ] Tablet media query
 [ ] iPhone X media query
