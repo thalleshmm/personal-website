@@ -10,6 +10,9 @@ class App extends Component {
     }
 
     componentDidMount() {
+        const evt = new CustomEvent('menubar-change-theme', { detail: 'DARK' });
+        window.dispatchEvent(evt);
+
         // We have to run it asyncly
         // otherwise the css animation won't run
         setTimeout(() => {
@@ -22,6 +25,9 @@ class App extends Component {
 
     componentWillUnmount() {
         this.$wrapper.classList.remove('app--active');
+
+        const evt = new CustomEvent('menubar-change-theme', { detail: 'LIGHT' });
+        window.dispatchEvent(evt);
     }
 
     close() {
@@ -45,7 +51,7 @@ class App extends Component {
         }
 
         return <Wrapper className='app' tabIndex="0">
-            <header className="app__header">
+            <header className={`app__header ${this.props.headless ? 'app__header--headless' : ''}`}>
                 <div className="app__header__actions">
                     <button type="button"
                             onClick={this.close}
@@ -83,7 +89,8 @@ App.propTypes = {
         disabled: PropTypes.bool
     }),
     type: PropTypes.oneOf(['default', 'form']),
-    history: PropTypes.object
+    history: PropTypes.object,
+    headless: PropTypes.bool
 }
 
 export default App;

@@ -9,16 +9,6 @@ class AppMail extends Component {
         this.onSend = this.onSend.bind(this);
     }
 
-    componentDidMount() {
-        const evt = new CustomEvent('menubar-change-theme', { detail: 'DARK' });
-        window.dispatchEvent(evt);
-    }
-
-    componentWillUnmount() {
-        const evt = new CustomEvent('menubar-change-theme', { detail: 'LIGHT' });
-        window.dispatchEvent(evt);
-    }
-
     isFormValid() {
         const subject = this.$subject.value;
         const message = this.$message.value;

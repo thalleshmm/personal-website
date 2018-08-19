@@ -27,6 +27,11 @@
     box-sizing: border-box;
 }
 
+.app__header--headless {
+    background-color: #FFF;
+    border-bottom: none;
+}
+
 .app__header__actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,6 +65,10 @@
 .app__header__title {
     margin: 0px;
     padding: 8px 16px 8px 16px;
+}
+
+.app__header--headless .app__header__title {
+    display: none;
 }
 
 .app__content {
