@@ -23,6 +23,25 @@
 
 .menubar__macos {
     display: none;
+    grid-template-columns: repeat(2, min-content) auto repeat(6, min-content);
+    grid-gap: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    height: 25px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .3);
+    color: #000;
+    background-color: rgb(236, 246, 255);
+}
+
+.menubar__macos__icon-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menubar__macos__icon-holder svg {
+    height: 18px;
 }
 
 .menubar__ios__icon-holder {
@@ -45,4 +64,14 @@
 
 .menubar--dark .menubar__ios svg {
     fill: #000;
+}
+
+@media (min-width: 1367px) {
+    .menubar__ios {
+        display: none;
+    }
+
+    .menubar__macos {
+        display: grid;
+    }
 }

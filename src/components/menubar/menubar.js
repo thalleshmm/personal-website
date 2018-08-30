@@ -60,7 +60,31 @@ class Menubar extends Component {
                 </div>
             </div>
             <div className="menubar__macos">
-
+                <div className="menubar__macos__icon-holder">
+                    {ICON.APPLE}
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    <b>Thalles&nbsp;Maia</b>
+                </div>
+                <div />
+                <div className="menubar__macos__icon-holder">
+                    {ICON.BLUETOOTH}
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    {ICON.SIGNAL_BAR}
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    {ICON.WIFI}
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    <Clock />
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    {ICON.SEARCH}
+                </div>
+                <div className="menubar__macos__icon-holder">
+                    {ICON.LIST}
+                </div>
             </div>
         </div>
     }
