@@ -1,0 +1,122 @@
+.app-about-me {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+    -webkit-overflow-scrolling: touch;
+}
+
+.app-about-me__header {
+    padding-bottom: 16px;
+}
+
+.app-about-me__profile-pic {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 100%;
+    max-width: 128px;
+    border: solid 3px #CCC;
+}
+
+.app-about-me__full-name {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.app-about-me__job {
+    text-align: center;
+    font-size: 14px;
+}
+
+.app-about-me__spacer {
+    display: block;
+    padding-bottom: 16px;
+}
+
+.app-about-me__container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.app-about-me__label {
+    color: #fea700;
+    font-size: 14px;
+}
+
+.app-about-me__card {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+    color: #969696;
+    background-color: #FFF;
+    padding: 16px;
+    line-height: 24px;
+}
+
+.app-about-me__3-col-row-inner {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.app-about-me__6-col-row-inner {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.app-about-me__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.app-about-me__link {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fea700;
+    border-radius: 100%;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.app-about-me__link svg {
+    height: 15px;
+    fill: #FFF;
+}
+
+@media (min-width: 768px) {
+    .app-about-me__1-col-row {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .app-about-me__2-col-row {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .app-about-me__2-col-row--margin-bottom {
+        margin-bottom: 16px;
+    }
+
+    .app-about-me__6-col-row-inner {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

@@ -32,6 +32,10 @@
     border-bottom: none;
 }
 
+.app__header--borderless {
+    border-bottom: none;
+}
+
 .app__header__actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

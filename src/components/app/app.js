@@ -50,19 +50,27 @@ class App extends Component {
                 <div {...props} ref={$el => this.$wrapper = $el}>{props.children}</div>;
         }
 
+        const defaultPrimaryColor = '#007aff';
+
+        const headerClassList = ['app__header'];
+        if (this.props.headless) headerClassList.push('app__header--headless');
+        if (this.props.borderless) headerClassList.push('app__header--borderless');
+
         return <Wrapper className='app' tabIndex="0">
-            <header className={`app__header ${this.props.headless ? 'app__header--headless' : ''}`}>
+            <header className={headerClassList.join(' ')}>
                 <div className="app__header__actions">
                     <button type="button"
                             onClick={this.close}
-                            className="app__header__actions__action">
+                            className="app__header__actions__action"
+                            style={{ color: this.props.primaryColor || defaultPrimaryColor }}>
                         &lt; Return
                     </button>
                     {this.props.action ?
                     <button onClick={this.props.action.onClick}
                             disabled={this.props.action.disabled ? true : false}
                             className="app__header__actions__action"
-                            type="submit">
+                            type="submit"
+                            style={{ color: this.props.primaryColor || defaultPrimaryColor }}>
                         {this.props.action.text}
                     </button> : <span />}
                 </div>
@@ -90,7 +98,9 @@ App.propTypes = {
     }),
     type: PropTypes.oneOf(['default', 'form']),
     history: PropTypes.object,
-    headless: PropTypes.bool
+    headless: PropTypes.bool,
+    primaryColor: PropTypes.string,
+    borderless: PropTypes.bool
 }
 
 export default App;
