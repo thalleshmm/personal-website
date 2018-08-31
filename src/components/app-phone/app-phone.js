@@ -10,7 +10,6 @@ class AppPhone extends Component {
                     headless>
             <div className="app-phone">
                 <a href="tel:+5537999470847"
-                   target="_system"
                    className="app-phone__number">
                     +55 (37) 9 9947-0847
                 </a>
@@ -156,7 +155,6 @@ class AppPhone extends Component {
                     <div className="app-phone__numpad__placeholder" />
                     <div className="app-phone__numpad__placeholder">
                         <a href="tel:+5537999470847"
-                                target="_system"
                                 className="app-phone-key app-phone-key--cta"
                                 aria-label="Call Me">
                             {ICON.PHONE}
