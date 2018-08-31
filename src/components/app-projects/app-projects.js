@@ -25,9 +25,10 @@ class AppProjects extends Component {
                     history={this.props.history}>
             <div className="app-projects">
                 <div className="app-projects__content">
-                    <ul class="app-projects-list">
-                        {this.state.projects.map(p => {
-                            return <li className="app-projects-list__item">
+                    <ul className="app-projects-list">
+                        {this.state.projects.map((p, i) => {
+                            return <li key={i}
+                                       className="app-projects-list__item">
                                 <div className="app-projects-list__item__icon"
                                      style={{ backgroundImage: `url(${p.image})` }} />
                                 <div className="app-projects-list__item__title">
