@@ -24,6 +24,9 @@ class AppMail extends Component {
 
         const subject = this.$subject.value;
         const message = this.$message.value;
+        const name    = this.$name.value;
+        const email   = this.$email.value;
+        const phone   = this.$phone.value;
         const honeypot = this.$honeypot.value;
 
         if (honeypot.length !== 0) return;
@@ -33,6 +36,16 @@ class AppMail extends Component {
                 text: 'Field `Subject` is empty'
             });
 
+            window.dispatchEvent(evt);
+            return;
+        }
+
+        if (name.length === 0) {
+            const detail = {
+                text: 'Field `Your Name` is empty'
+            };
+
+            const evt = new CustomEvent('dialog-open', { detail });
             window.dispatchEvent(evt);
             return;
         }
@@ -49,6 +62,9 @@ class AppMail extends Component {
 
         const body = new FormData();
         body.set('subject', subject);
+        body.set('name', name);
+        body.set('email', email);
+        body.set('phone', phone);
         body.set('message', message);
 
         try {
@@ -65,6 +81,9 @@ class AppMail extends Component {
             window.dispatchEvent(evt);
 
             this.$subject.value = 'Website Contact';
+            this.$name.value = '';
+            this.$email.value = '';
+            this.$phone.value = '';
             this.$message.value = '';
 
         } catch (e) {
@@ -113,6 +132,33 @@ class AppMail extends Component {
                            className="app-mail__form-group__form-control"
                            defaultValue="Website Contact"
                            ref={$el => this.$subject = $el} />
+                </div>
+                <div className="app-mail__form-group">
+                    <label htmlFor="name"
+                           className="app-mail__form-group__label">Your Name:</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           className="app-mail__form-group__form-control"
+                           ref={$el => this.$name = $el} />
+                </div>
+                <div className="app-mail__form-group">
+                    <label htmlFor="email"
+                           className="app-mail__form-group__label">Your E-Mail:</label>
+                    <input type="text"
+                           id="email"
+                           name="email"
+                           className="app-mail__form-group__form-control"
+                           ref={$el => this.$email = $el} />
+                </div>
+                <div className="app-mail__form-group">
+                    <label htmlFor="phone"
+                           className="app-mail__form-group__label">Your Phone:</label>
+                    <input type="text"
+                           id="phone"
+                           name="phone"
+                           className="app-mail__form-group__form-control"
+                           ref={$el => this.$phone = $el} />
                 </div>
                 <textarea name="message"
                           className="app-mail__textarea"
