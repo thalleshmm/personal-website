@@ -61,9 +61,32 @@ class AppAboutMe extends Component {
                         </div>
                         <div className="app-about-me__card">
                             <b>Full-Stack Developer</b><br />
-                            JMV Technolgy<br />
+                            JMV Technology
+                            <a href="https://jmvtechnology.com/"
+                               rel="noopener noreferrer"
+                               target="_blank"
+                               className="app-about-me__link-icon"
+                               aria-label="JMV Technology">
+                               {ICON.LINK}
+                            </a><br />
                             <small>Nov 2012 - Present</small>
                         </div>
+                    </div>
+                    <div className="app-about-me__spacer" />
+                    <div className="app-about-me__container">
+                        <label className="app-about-me__label">Talks</label>
+                    </div>
+                    <div className="app-about-me__1-col-row">
+                        <p className="app-about-me__card">
+                            <b>PWA</b>
+                            <a href="https://www.meetup.com/pt-BR/GDG-Divinopolis/events/246607264/"
+                               rel="noopener noreferrer"
+                               target="_blank"
+                               className="app-about-me__link-icon"
+                               aria-label="PWA with Thalles Maia">{ICON.LINK}</a><br />
+                            Google Developer Group Divinópolis<br />
+                            16/01/2018
+                        </p>
                     </div>
                     <div className="app-about-me__spacer" />
                     <div className="app-about-me__container">

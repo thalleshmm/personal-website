@@ -98,6 +98,17 @@
     fill: #FFF;
 }
 
+.app-about-me__link-icon {
+    text-decoration: none;
+}
+
+.app-about-me__link-icon svg {
+    height: 15px;
+    margin-left: 5px;
+    transform: translateY(2px);
+    fill: #fea700;
+}
+
 @media (min-width: 768px) {
     .app-about-me__1-col-row {
         padding-left: 16px;
