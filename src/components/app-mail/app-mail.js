@@ -25,11 +25,6 @@ class AppMail extends Component {
         const subject = this.$subject.value;
         const message = this.$message.value;
         const name    = this.$name.value;
-        const email   = this.$email.value;
-        const phone   = this.$phone.value;
-        const honeypot = this.$honeypot.value;
-
-        if (honeypot.length !== 0) return;
         
         if (subject.length === 0) {
             const evt = new CustomEvent('dialog-open', {
@@ -60,42 +55,7 @@ class AppMail extends Component {
             return;
         }
 
-        const body = new FormData();
-        body.set('subject', subject);
-        body.set('name', name);
-        body.set('email', email);
-        body.set('phone', phone);
-        body.set('message', message);
-
-        try {
-            await fetch('https://formspree.io/thalleshmmaia@gmail.com', {
-                method: 'POST',
-                body
-            });
-
-            const detail = {
-                text: 'Your message has been sent successfully. Thank you. I\'ll reply ASAP.'
-            };
-
-            const evt = new CustomEvent('dialog-open', { detail });
-            window.dispatchEvent(evt);
-
-            this.$subject.value = 'Website Contact';
-            this.$name.value = '';
-            this.$email.value = '';
-            this.$phone.value = '';
-            this.$message.value = '';
-
-        } catch (e) {
-            const detail = {
-                text: 'I\'m sorry. E-mail could not be sent. Try again later'
-            };
-
-            const evt = new CustomEvent('dialog-open', { detail });
-            window.dispatchEvent(evt);
-
-            return;
-        }
+        this.$form.$wrapper.submit();
     }
 
     render() {
@@ -106,15 +66,12 @@ class AppMail extends Component {
 
         return <App title="Mail"
                     action={actionButton}
+                    formAction="https://formspree.io/thalleshmmaia@gmail.com"
+                    formMethod="POST"
                     type="form"
-                    history={this.props.history}>
+                    history={this.props.history}
+                    ref={$el => this.$form = $el}>
             <div className="app-mail__form">
-                <input type="text"
-                       className="app-mail__form__honeypot"
-                       ref={$el => this.$honeypot = $el}
-                       name="fullname"
-                       tabIndex="-1"
-                       aria-hidden="true" />
                 <div className="app-mail__form-group">
                     <label htmlFor="for" className="app-mail__form-group__label">For:</label>
                     <input type="email"
@@ -145,7 +102,7 @@ class AppMail extends Component {
                 <div className="app-mail__form-group">
                     <label htmlFor="email"
                            className="app-mail__form-group__label">Your E-Mail:</label>
-                    <input type="text"
+                    <input type="email"
                            id="email"
                            name="email"
                            className="app-mail__form-group__form-control"

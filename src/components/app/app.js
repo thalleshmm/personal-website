@@ -88,7 +88,10 @@ class App extends Component {
     render() {
         const Wrapper = props => {
             return this.props.type === 'form' ?
-                <form {...props} ref={$el => this.$wrapper = $el}>{props.children}</form> :
+                <form {...props}
+                      ref={$el => this.$wrapper = $el}
+                      action={this.props.formAction}
+                      method={this.props.formMethod}>{props.children}</form> :
                 <div {...props} ref={$el => this.$wrapper = $el}>{props.children}</div>;
         }
 
@@ -151,7 +154,9 @@ App.propTypes = {
     history: PropTypes.object,
     headless: PropTypes.bool,
     primaryColor: PropTypes.string,
-    borderless: PropTypes.bool
+    borderless: PropTypes.bool,
+    formAction: PropTypes.string,
+    formMethod: PropTypes.oneOf(['GET', 'POST'])
 }
 
 export default App;
