@@ -76,7 +76,7 @@ class AppAboutMe extends Component {
                     <div className="app-about-me__container">
                         <label className="app-about-me__label">Talks</label>
                     </div>
-                    <div className="app-about-me__1-col-row">
+                    <div className="app-about-me__2-col-row">
                         <p className="app-about-me__card">
                             <b>PWA</b>
                             <a href="https://www.meetup.com/pt-BR/GDG-Divinopolis/events/246607264/"
@@ -86,6 +86,16 @@ class AppAboutMe extends Component {
                                aria-label="PWA with Thalles Maia">{ICON.LINK}</a><br />
                             Google Developer Group Divinópolis<br />
                             16/01/2018
+                        </p>
+                        <p className="app-about-me__card">
+                            <b>Javascript Frameworks</b>
+                            <a href="http://www.uemg.br/"
+                               rel="noopener noreferrer"
+                               target="_blank"
+                               className="app-about-me__link-icon"
+                               aria-label="Javascript Frameworks">{ICON.LINK}</a><br />
+                            UEMG, Divinópolis<br />
+                            19/09/2018
                         </p>
                     </div>
                     <div className="app-about-me__spacer" />
