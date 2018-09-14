@@ -66,7 +66,7 @@ class AppMail extends Component {
 
         return <App title="Mail"
                     action={actionButton}
-                    formAction="https://formspree.io/thalleshmmaia@gmail.com"
+                    formAction="https://formspree.io/tmaiadev@gmail.com"
                     formMethod="POST"
                     type="form"
                     history={this.props.history}
@@ -77,7 +77,7 @@ class AppMail extends Component {
                     <input type="email"
                            id="for"
                            className="app-mail__form-group__form-control"
-                           defaultValue="thalleshmmaia@gmail.com"
+                           defaultValue="tmaiadev@gmail.com"
                            readOnly />
                 </div>
                 <div className="app-mail__form-group">

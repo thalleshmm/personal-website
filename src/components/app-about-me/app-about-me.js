@@ -21,7 +21,7 @@ class AppAboutMe extends Component {
                         Full Stack Developer
                     </div>
                     <div className="app-about-me__links">
-                        <a href="mailto:thalleshmmaia@gmail.com"
+                        <a href="mailto:tmaiadev@gmail.com"
                            className="app-about-me__link"
                            aria-label="E-mail">
                             {ICON.MAIL}
