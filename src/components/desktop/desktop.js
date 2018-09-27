@@ -8,7 +8,7 @@ class Desktop extends Component {
         return <div className="desktop">
             <div className="desktop__icon-grid">
                 <div className="desktop__icon-grid__item">
-                    <AppIcon to="https://github.com/thalleshmm/"
+                    <AppIcon to="https://github.com/tmaiadev/"
                              label="Github"
                              visibleLabel
                              backgroundColor="#d56efd"
@@ -16,7 +16,7 @@ class Desktop extends Component {
                              icon={ICON.GITHUB} />
                 </div>
                 <div className="desktop__icon-grid__item">
-                    <AppIcon to="https://linkedin.com/in/thalleshmm/"
+                    <AppIcon to="https://linkedin.com/in/tmaiadev/"
                              label="LinkedIn"
                              visibleLabel
                              backgroundColor="#00d8eb"
@@ -24,7 +24,7 @@ class Desktop extends Component {
                              icon={ICON.LINKEDIN} />
                 </div>
                 <div className="desktop__icon-grid__item">
-                    <AppIcon to="https://twitter.com/thalleshmm/"
+                    <AppIcon to="https://twitter.com/tmaiadev/"
                              label="Twitter"
                              visibleLabel
                              backgroundColor="#19d7fb"
@@ -32,7 +32,7 @@ class Desktop extends Component {
                              icon={ICON.TWITTER} />
                 </div>
                 <div className="desktop__icon-grid__item">
-                    <AppIcon to="https://instagram.com/thalleshmmaia/"
+                    <AppIcon to="https://instagram.com/tmaiadev/"
                              label="Instagram"
                              visibleLabel
                              backgroundColor="#ed4eb5"
@@ -40,7 +40,7 @@ class Desktop extends Component {
                              icon={ICON.INSTAGRAM} />
                 </div>
                 <div className="desktop__icon-grid__item">
-                    <AppIcon to="https://facebook.com/thalleshmm/"
+                    <AppIcon to="https://facebook.com/tmaiadev/"
                              label="Facebook"
                              visibleLabel
                              backgroundColor="#3A5CA9"
