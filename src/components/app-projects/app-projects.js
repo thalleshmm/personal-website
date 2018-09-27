@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import App from '../app/app';
 import './app-projects.css';
+import IMAGE_NOTES from './images/app-notes.png';
+import IMAGE_VINI from './images/app-vini.png';
 
 class AppProjects extends Component {
     state = {
@@ -9,13 +11,13 @@ class AppProjects extends Component {
                 title: 'Notes',
                 description: 'Notes is a simple and easy way to take notes and make lists',
                 link: 'https://notes-4e0e9.firebaseapp.com/',
-                image: '/images/app-notes.png'
+                image: IMAGE_NOTES
             },
             {
                 title: 'Vini Maia - Poeira Estelar',
                 description: 'Listen to the latest album of Vini Maia',
                 link: 'https://vinimaia.com.br/',
-                image: '/images/app-vini.png'
+                image: IMAGE_VINI
             }
         ]
     }

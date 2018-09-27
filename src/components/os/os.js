@@ -8,6 +8,7 @@ import AppPhone from '../app-phone/app-phone';
 import AppProjects from '../app-projects/app-projects';
 import AppAboutMe from '../app-about-me/app-about-me';
 import Dialog from '../dialog/dialog';
+import WALLPAPER from './images/wallpaper.jpg';
 import './os.css';
 
 class App extends Component {
@@ -49,7 +50,8 @@ class App extends Component {
     render() {
         return <BrowserRouter>
             <div className='os'
-                 ref={$el => this.$os = $el}>
+                 ref={$el => this.$os = $el}
+                 style={{ backgroundImage: `url(${WALLPAPER})` }}>
                 <Menubar />
                 <div className="os__desktop">
                     <Desktop />

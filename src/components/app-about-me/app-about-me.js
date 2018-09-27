@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import App from '../app/app';
 import ICON from '../../icons';
 import './app-about-me.css';
+import PROFILE_PIC from './images/thalles-maia.png';
 
 class AppAboutMe extends Component {
     render() {
@@ -11,7 +12,7 @@ class AppAboutMe extends Component {
                     borderless>
             <div className="app-about-me">
                 <div>
-                    <img src="images/thalles-maia.png"
+                    <img src={PROFILE_PIC}
                          className="app-about-me__profile-pic"
                          alt="Thalles Maia handsome face =P" />
                     <h2 className="app-about-me__full-name">
