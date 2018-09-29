@@ -1,6 +1,7 @@
 .os {
     display: grid;
     grid-template-rows: auto 90px;
+    grid-template-rows: auto calc(90px + env(safe-area-inset-bottom));
     position: absolute;
     top: 0px;
     left: 0px;

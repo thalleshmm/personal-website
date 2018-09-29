@@ -24,38 +24,21 @@ class App extends Component {
 
         const evt = new CustomEvent('menubar-change-theme', { detail: 'DARK' });
         window.dispatchEvent(evt);
-
-        // We have to run it asyncly
-        // otherwise the css animation won't run
-        setTimeout(() => {
-            this.$wrapper.classList.add('app--active');
-            setTimeout(() => {
-                this.$wrapper.focus();
-            }, 334);
-        }, 32);
     }
 
     componentWillUnmount() {
         window.removeEventListener('mousemove', this.onChromeMouseMove);
         window.removeEventListener('mouseup', this.onChromeMouseUp);
 
-        this.$wrapper.classList.remove('app--active');
-
         const evt = new CustomEvent('menubar-change-theme', { detail: 'LIGHT' });
         window.dispatchEvent(evt);
     }
 
     close() {
-        this.$wrapper.classList.remove('app--active');
-        
-        // Wait animation to end before
-        // changing the URL
-        setTimeout(() => {
-            if (this.props.history)
+        if (this.props.history)
                 this.props.history.push('/');
             else
                 window.history.back();
-        }, 333)
     }
 
     onChromeMouseDown(evt) {
@@ -101,7 +84,7 @@ class App extends Component {
         if (this.props.headless) headerClassList.push('app__header--headless');
         if (this.props.borderless) headerClassList.push('app__header--borderless');
 
-        return <Wrapper className='app'
+        return <Wrapper className='app app--active'
                         tabIndex="0"
                         onMouseDown={this.onChromeMouseDown}>
             <div className="app__chrome">
