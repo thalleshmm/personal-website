@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import App from '../app/app';
 import './app-projects.css';
+import IMAGE_PWASHOP from './images/app-pwashop.png';
 import IMAGE_NOTES from './images/app-notes.png';
 import IMAGE_VINI from './images/app-vini.png';
 
 class AppProjects extends Component {
     state = {
         projects: [
+            {
+                title: 'PWA Shop',
+                description: 'Open source e-commerce created with react and firebase',
+                image: IMAGE_PWASHOP,
+                link: 'http://pwa-shop-7c365.firebaseapp.com'
+            },
             {
                 title: 'Notes',
                 description: 'Notes is a simple and easy way to take notes and make lists',
