@@ -61,7 +61,7 @@ class AppAboutMe extends Component {
                             <small>Jul 2008 - Nov 2012</small>
                         </div>
                         <div className="app-about-me__card">
-                            <b>Full-Stack Developer</b><br />
+                            <b>Full-Stack Web Developer</b><br />
                             JMV Technology
                             <a href="https://jmvtechnology.com/"
                                rel="noopener noreferrer"
@@ -72,6 +72,22 @@ class AppAboutMe extends Component {
                             </a><br />
                             <small>Nov 2012 - Present</small>
                         </div>
+                    </div>
+                    <div className="app-about-me__2-col-row">
+                        <div className="app-about-me__card">
+                            <b>Front-End Web Developer</b><br />
+                            Minutrade
+                            <a href="http://recompensas.minutrade.com/en/"
+                               rel="noopener noreferrer"
+                               target="_blank"
+                               className="app-about-me__link-icon"
+                               aria-label="JMV Technology">
+                               {ICON.LINK}
+                            </a><br />
+                            <br />
+                            <small>Nov 2018 - May 2019</small>
+                        </div>
+                        <div />
                     </div>
                     <div className="app-about-me__spacer" />
                     <div className="app-about-me__container">
@@ -152,11 +168,12 @@ class AppAboutMe extends Component {
                                 <span>Redux</span>
                                 <span>SSR</span>
                                 <span>JQuery</span>
-                                <span>Typescript</span>
                                 <span>PWA</span>
                                 <span>ServiceWorker</span>
                                 <span>RestfulAPI</span>
                                 <span>BEM&nbsp;Pattern</span>
+                                <span>Hooks</span>
+                                <span>Jest</span>
                             </div>
                         </div>
                     </div>

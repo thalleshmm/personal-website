@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import App from '../app/app';
 import './app-projects.css';
+import IMAGE_PODCATCHER from './images/app-podcatcher.png';
 import IMAGE_PWASHOP from './images/app-pwashop.png';
 import IMAGE_NOTES from './images/app-notes.png';
 import IMAGE_VINI from './images/app-vini.png';
@@ -8,6 +9,12 @@ import IMAGE_VINI from './images/app-vini.png';
 class AppProjects extends Component {
     state = {
         projects: [
+            {
+                title: 'Podcatcher',
+                description: 'Free Podcast Player. PWA.',
+                image: IMAGE_PODCATCHER,
+                link: 'https://podcatcher.app/'
+            },
             {
                 title: 'PWA Shop',
                 description: 'Open source e-commerce created with react and firebase',
