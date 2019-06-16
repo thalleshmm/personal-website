@@ -33,26 +33,24 @@
     position: relative;
 }
 
-@media (min-width: 1367px) {
-    .dock {
-        width: 340px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 16px 16px 0px 0px;
-    }
+.macos .dock {
+    width: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0px 0px;
+}
 
-    .dock__list {
-        padding-left: 8px;
-        padding-right: 8px;
-        box-sizing: border-box;
-    }
+.macos .dock__list {
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
 
-    .dock__list-item > * {
-        will-change: transform;
-        transition: transform .3s ease-in-out;
-    }
+.macos .dock__list-item > * {
+    will-change: transform;
+    transition: transform .3s ease-in-out;
+}
 
-    .dock__list-item > *:hover {
-        transform: scale(1.2) translateY(-6px);
-    }
+.macos .dock__list-item > *:hover {
+    transform: scale(1.2) translateY(-6px);
 }

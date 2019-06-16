@@ -25,19 +25,17 @@
     justify-content: center;
 }
 
-@media (min-width: 1367px) {
-    .desktop__icon-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 80px);
-        grid-row-gap: 16px;
-        align-items: flex-end;
-        top: auto;
-        bottom: 16px;
-        height: auto;
-    }
+.macos .desktop__icon-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 80px);
+    grid-row-gap: 16px;
+    align-items: flex-end;
+    top: auto;
+    bottom: 16px;
+    height: auto;
+}
 
-    .desktop__icon-grid__item {
-        justify-content: flex-end;
-        padding-right: 16px;
-    }
+.macos .desktop__icon-grid__item {
+    justify-content: flex-end;
+    padding-right: 16px;
 }

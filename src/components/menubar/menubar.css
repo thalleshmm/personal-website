@@ -5,7 +5,7 @@
     left: 0px;
     width: 100%;
     height: 20px;
-    z-index: 1;
+    z-index: 99999999;
 }
 
 .menubar__ios {
@@ -66,12 +66,10 @@
     fill: #000;
 }
 
-@media (min-width: 1367px) {
-    .menubar__ios {
-        display: none;
-    }
+.macos .menubar__ios {
+    display: none;
+}
 
-    .menubar__macos {
-        display: grid;
-    }
+.macos .menubar__macos {
+    display: grid;
 }

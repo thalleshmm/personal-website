@@ -127,38 +127,36 @@
     opacity: 0;
 }
 
-@media (min-width: 1367px) {
-    .app {
-        top: calc(50% - 250px);
-        left: calc(50% - 384px);
-        will-change: transfrom;
-        width: 768px;
-        height: 500px;
-        border-radius: 4px;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, .6);
-        transform: translate(0px, 0px);
-        transition: none;
-    }
+.macos .app {
+    top: calc(50% - 250px);
+    left: calc(50% - 384px);
+    will-change: transfrom;
+    width: 768px;
+    height: 500px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .6);
+    transform: translate(0px, 0px);
+    transition: none;
+}
 
-    .app__chrome {
-        display: flex;
-    }
+.macos .app__chrome {
+    display: flex;
+}
 
-    .app__header {
-        border-radius: 4px 4px 0px 0px;
-    }
+.macos .app__header {
+    border-radius: 4px 4px 0px 0px;
+}
 
-    .app__header__title {
-        margin-top: -30px;
-    }
+.macos .app__header__title {
+    margin-top: -30px;
+}
 
-    .app__header__actions__action {
-        height: 40px;
-        margin-bottom: -20px;
-    }
+.macos .app__header__actions__action {
+    height: 40px;
+    margin-bottom: -20px;
+}
 
-    .app__header__actions__action:first-child {
-        opacity: 0;
-        pointer-events: none;
-    }
+.macos .app__header__actions__action:first-child {
+    opacity: 0;
+    pointer-events: none;
 }

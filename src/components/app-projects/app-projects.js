@@ -38,7 +38,8 @@ class AppProjects extends Component {
 
     render() {
         return <App title="Projects"
-                    history={this.props.history}>
+                    history={this.props.history}
+                    pathname="/projects">
             <div className="app-projects">
                 <div className="app-projects__content">
                     <ul className="app-projects-list">

@@ -7,7 +7,8 @@ class AppPhone extends Component {
     render() {
         return <App title="Phone"
                     history={this.props.history}
-                    headless>
+                    headless
+                    pathname="/phone">
             <div className="app-phone">
                 <a href="tel:+5537999470847"
                    className="app-phone__number">

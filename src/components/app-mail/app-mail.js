@@ -70,7 +70,9 @@ class AppMail extends Component {
                     formMethod="POST"
                     type="form"
                     history={this.props.history}
-                    ref={$el => this.$form = $el}>
+                    location={this.props.location}
+                    ref={$el => this.$form = $el}
+                    pathname="/email">
             <div className="app-mail__form">
                 <div className="app-mail__form-group">
                     <label htmlFor="for" className="app-mail__form-group__label">For:</label>

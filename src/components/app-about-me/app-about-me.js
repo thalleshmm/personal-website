@@ -9,7 +9,8 @@ class AppAboutMe extends Component {
         return <App title="About Me"
                     history={this.props.history}
                     primaryColor="#fea700"
-                    borderless>
+                    borderless
+                    pathname="/about-me">
             <div className="app-about-me">
                 <div>
                     <img src={PROFILE_PIC}
