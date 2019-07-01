@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import App from '../app/app';
 import './app-projects.css';
+import IMAGE_TICTACTOE from './images/app-tictactoe.png';
 import IMAGE_PODCATCHER from './images/app-podcatcher.png';
 import IMAGE_PWASHOP from './images/app-pwashop.png';
 import IMAGE_NOTES from './images/app-notes.png';
@@ -9,6 +10,12 @@ import IMAGE_VINI from './images/app-vini.png';
 class AppProjects extends Component {
     state = {
         projects: [
+            {
+                title: 'TicTacToe',
+                description: 'Mini Game',
+                image: IMAGE_TICTACTOE,
+                link: 'https://tmaiadev-tictactoe.netlify.com/'
+            },
             {
                 title: 'Podcatcher',
                 description: 'Free Podcast Player. PWA.',
