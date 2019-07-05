@@ -123,6 +123,7 @@ a {
   display: inline-block;
   font-size: var(--title-2);
   border-bottom: solid thick var(--accent-color);
+  margin: 0px;
   margin-bottom: var(--margin);
 }
 
